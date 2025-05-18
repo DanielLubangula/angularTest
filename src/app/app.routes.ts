@@ -32,7 +32,7 @@ export const routes: Routes = [
     component: CreateComponent
   },
   {
-    path: 'articles/edit/:id',
+    path: 'articles/edit/:id',  
     component: EditComponent
   },
   {
