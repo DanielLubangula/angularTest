@@ -1,0 +1,26 @@
+<div class="container py-5">
+  <h1 class="text-center mb-5">Se <span style="color : green">Connecter</span></h1>
+
+  <div *ngIf="isOpen" class="alert alert-danger alert-dismissible fade show" role="alert">
+    email ou mot de passe incorrect
+    <button (click)="close()" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <form [formGroup]="applyForm" (submit)="AuthUser()">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Email address</label>
+          <input type="email" formControlName="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Password</label>
+          <input type="password" formControlName="password" class="form-control" id="exampleFormControlTextarea1">
+        </div>
+        <p><Button type="submit" class="btn btn-primary">Valider</Button></p>
+      </form>
+    </div>
+  </div>
+</div>

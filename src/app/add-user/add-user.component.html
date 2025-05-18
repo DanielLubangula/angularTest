@@ -1,0 +1,20 @@
+<div class="container py-5">
+  <h1 class="my-5 text-center">Enregistrer un utilisateur</h1>
+
+  <div *ngIf="isOpen" class="alert alert-success alert-dismissible fade show" role="alert">
+    Votre compte est crée veuillez vous connecter
+    <button (click)="close()" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <form [formGroup]="applyForm" (submit)="save()">
+          <p>Noms : <input type="text" formControlName="fullName" class="form-control"></p>
+          <p>Email : <input type="text" formControlName="email" class="form-control"></p>
+          <p>Mots de passe : <input type="password" formControlName="password" class="form-control"></p>
+          <p><Button type="submit" class="btn btn-primary">Valider</Button></p>
+        </form>
+      </div>
+  </div>
+</div>

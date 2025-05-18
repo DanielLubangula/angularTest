@@ -1,0 +1,8 @@
+<div class="container px-5">
+  <h1 class="container py-3">Tous les utilisateurs</h1>
+  <p class="text-end">
+      <a class="btn btn-primary" [routerLink]="('/adduser')">Add User</a>
+  </p>
+  <app-user *ngFor="let user of users" [user]="user"></app-user> <!-- appel de Article Component [article]:le nom qui sera utilisé par l'enfant pour la boucle / "article": la variable article qui se trouve dans article liste / *ngfor permet de faire la boucle des element du tableau-->
+  
+</div>
